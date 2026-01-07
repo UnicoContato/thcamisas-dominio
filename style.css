@@ -1,0 +1,61 @@
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Nav Links */
+.nav-link {
+    @apply font-semibold uppercase text-xs tracking-widest hover:text-thAccent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-thAccent after:transition-all hover:after:w-full drop-shadow-sm;
+}
+
+.mobile-nav-link {
+    @apply text-lg font-bold border-b border-gray-100 pb-2 hover:text-thAccent transition-colors uppercase tracking-wide;
+}
+
+/* Buttons */
+.btn-hero-primary {
+    @apply bg-thAccent text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all shadow-xl shadow-yellow-500/30 transform hover:-translate-y-1 hover:scale-105 border border-transparent flex justify-center items-center;
+}
+
+.btn-hero-secondary {
+    @apply bg-white/10 backdrop-blur-md text-white border border-white/50 px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-thBlue transition-all transform hover:-translate-y-1 hover:shadow-lg flex justify-center items-center;
+}
+
+/* Cards */
+.service-card {
+    @apply bg-white p-10 rounded-[2.5rem] shadow-lg border border-gray-100 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+}
+
+/* Header States */
+#main-header.scrolled {
+    @apply bg-white/95 shadow-md py-2 border-transparent;
+}
+
+#main-header.scrolled .nav-link {
+    @apply text-slate-700;
+}
+
+#main-header.scrolled #logo-text {
+    @apply text-slate-800 drop-shadow-none;
+}
+
+#main-header.scrolled #menu-btn {
+    @apply text-slate-800;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
